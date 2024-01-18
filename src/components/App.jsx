@@ -22,7 +22,7 @@ export const App = () => {
           <ContactList />
         </div>
       ) : (
-        <p>We don't have any contacts yet</p>
+        <p>You don't have any contacts yet</p>
       )}
 
       <GlobalStyle />
