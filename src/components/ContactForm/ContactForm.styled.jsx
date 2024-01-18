@@ -1,6 +1,7 @@
+import { ErrorMessage, Form } from 'formik';
 import styled from 'styled-components';
 
-export const ContactFormWrapper = styled.form`
+export const ContactFormWrapper = styled(Form)`
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -17,6 +18,12 @@ export const ContactFormWrapper = styled.form`
       border-radius: 5px;
     }
   }
+`;
+
+export const Error = styled(ErrorMessage)`
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
 `;
 
 export const ButtonForm = styled.button`

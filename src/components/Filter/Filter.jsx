@@ -1,13 +1,19 @@
+import { changeFilter, getFilter } from '../../redux/filterSlice';
 import { FilterWrapper } from './Filter.styled';
+import { useDispatch, useSelector } from 'react-redux';
 
-export const Filter = ({ handleChangeFilter, text }) => {
+export const Filter = () => {
+  const filter = useSelector(getFilter);
+  const dispatch = useDispatch();
+
   return (
     <FilterWrapper>
-      {text}
+      Filter by name
       <input
         type="text"
         name="name"
-        onChange={evt => handleChangeFilter(evt.target.value)}
+        value={filter}
+        onChange={evt => dispatch(changeFilter(evt.target.value))}
       />
     </FilterWrapper>
   );
